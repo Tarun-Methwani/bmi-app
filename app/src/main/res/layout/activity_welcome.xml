@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tarunmethwani.bmi.WelcomeActivity">
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:textSize="20dp"
+        android:textColor="@color/colorRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:text="Fetching..." />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvHeightFeet"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spnHeightFeet"
+        android:layout_marginBottom="20dp"
+        android:text="In Feet"
+        android:layout_alignRight="@+id/spnHeightFeet"
+        android:layout_alignEnd="@+id/spnHeightFeet" />
+
+    <TextView
+        android:id="@+id/tvHeight"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvHeightFeet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:text="Height" />
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnCalculate"
+        android:layout_toEndOf="@+id/tvWeight"
+        android:layout_toRightOf="@+id/tvWeight"
+        android:text="History" />
+
+    <Spinner
+        android:id="@+id/spnHeightFeet"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/tvLocation"
+        android:layout_alignStart="@+id/tvLocation" />
+
+    <Spinner
+        android:id="@+id/spnHeightInch"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeightFeet"
+        android:layout_alignRight="@+id/btnHistory"
+        android:layout_alignEnd="@+id/btnHistory" />
+
+    <TextView
+        android:id="@+id/tvHeightInch"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In Inch"
+        android:layout_below="@+id/tvHeight"
+        android:layout_alignLeft="@+id/spnHeightInch"
+        android:layout_alignStart="@+id/spnHeightInch" />
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Weight in kg"
+        android:layout_below="@+id/spnHeightFeet"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/tvHeight"
+        android:layout_toStartOf="@+id/tvHeight" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvName"
+        android:layout_alignRight="@+id/tvHeightInch"
+        android:layout_alignEnd="@+id/tvHeightInch"
+        android:textSize="20dp"
+        android:textColor="@color/colorRed"
+        android:id="@+id/tvTemperature" />
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter your weight"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="37dp"
+        android:layout_width="200dp"
+        android:layout_above="@+id/btnHistory"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
